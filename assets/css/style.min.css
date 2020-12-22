@@ -63,11 +63,28 @@ ul.pro-feat li {
     width: 20%;
     margin-top: 30px;
   }
+  
   ul.pro-feat li {
     width: 100%;
   }
 } 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (mi4n-width: 600px) {
+  ul.product-feature li {
+    width: 48%;}
+  ul.product-feature li img {
+    width: 20%;
+    margin-top: 30px;
+  }
+  ul.pro-feat li {
+    width: 46%;
+  }
+}
 
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+} 
 .page-title {
     font-size: 2em;
     margin-bottom: 20px;
@@ -221,6 +238,17 @@ ul.appstore li {
   margin-right: 20px;
   margin-bottom: 20px;
 }
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  ul.appstore li {
+    width:25%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  
+} 
 .btn-eazy {
   background: #40AFEC;
   color:#fff;
