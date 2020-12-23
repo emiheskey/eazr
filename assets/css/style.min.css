@@ -575,6 +575,7 @@ ul.price-tag li i {
   background-color: #1E1E23;
   height: 65px;
   width: 60px;
+  margin-top: 10px;
 }
 
 
@@ -656,7 +657,7 @@ ul.price-tag li i {
   background-color: #F5F6FA;
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
-  transform: translate(-320%, 0);
+  transform: translate(-520%, 0);
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
@@ -670,3 +671,29 @@ ul.price-tag li i {
 {
   transform: none;
 }
+
+/* Responsive Hacks */
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  /* Styles */
+  ul.product-feature li {
+    width: 30%;
+  }
+  ul.pro-feat li {
+    width: 46%;
+}
+.logo {
+  width: 150px;
+  margin-bottom: 10px;
+}
+.logo img {
+  margin-left: 10px;
+}
+header .nav .main-mneu ul li a{font-size:15px;}
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .nav-small {
+    display: none
+  }
+} 
