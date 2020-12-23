@@ -697,3 +697,22 @@ header .nav .main-mneu ul li a{font-size:15px;}
     display: none
   }
 } 
+@media only screen and (max-width: 360px) {
+  ul.appstore li {
+    width: 100%;
+  }
+  ul.pro-feat li {
+    width: 100%;
+}
+}
+@media only screen and (max-device-width : 858px) {
+  ul.product-feature li {
+    width: 50%;
+  }
+}
+
+.client-section img{
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
