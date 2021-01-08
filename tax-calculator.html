@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Iceberg-->
+    <link rel="stylesheet" href="assets/css/iceberg.css">
+    <!-- Fav Icon -->
+    <link rel="icon" type="image/png" href="assets/images/icon.png" />
+    <!-- Title-->
+    <title>EAZR HR || Tax Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="header my-5 p-4">
+            <div class="row">
+              <div class="col-md-3">
+                <img src="assets/images/logo.png" class="logo">
+              </div>
+              <div class="col-md-9">
+                <div class="float-right p-3">
+                  <a href="index.html" class="btn btn-lg btn-secondary">Back to Home</a>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <!-- Tax calculator -->
+              <h3 class="mt-5">Income Tax Calculator, Nigeria</h2>
+              <p>Find how much your salary is after tax</p>
+        </div>
+    </div>
+    <div class="calc-area mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-xs-12">
+            <div class="calc-1">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="income">Enter your gross income</label>
+                    <input type="text" class="form-control" id="income" value="150,000">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputState">Per</label>
+                    <select id="inputState" class="form-control">
+                      <option>Year</option>
+                      <option selected>Month</option>
+                      <option>Biweekly</option>
+                      <option>Weekly</option>
+                      <option>Day</option>
+                      <option>Hour</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputState">Where do you work?</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>Nigeria</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                  <button class="btn btn-main mt-2 btn-block">Calculate</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+                <!-- Deductions -->
+                <section class="main-box" id="deductions">
+                  <div class="no-line title-filter-holder">
+                      <div class="deductions-title">Deductions</div>
+                      <div class="timefilter-holder">
+                          <div id="year_link" class="time-filter-link " onclick="timeFilter('year',this)">Year</div>
+                                  
+      
+                            <div id="month_link" class="time-filter-link active-link" onclick="timeFilter('month',this)">Month</div>
+                                  
+      
+                              <div id="biweek_link" class="time-filter-link " onclick="timeFilter('biweek',this)">Biweekly</div>
+
+
+                              <div id="week_link" class="time-filter-link " onclick="timeFilter('week',this)">Week</div>
+
+
+                              <div id="day_link" class="time-filter-link " onclick="timeFilter('day',this)">Day</div>
+
+
+                              <div id="hour_link" class="time-filter-link " onclick="timeFilter('hour',this)">Hour</div>
+                                  
+      
+                                          </div>
+                  </div>
+                  <div class="content-holder">
+                      <div class="taxes">
+                          <div>
+                              <div class="deductions-row highlight">
+                                  <div class="deduction-label">Salary</div>
+                                  <div id="salary" class="deduction-value">₦1,800,000</div>
+                              </div>
+                                                                                                                          <div class="deductions-row">
+                                              <div class="deduction-label">NHF</div>
+                                              <div class="deduction-value" id="deduction_0">- ₦45,000</div>
+                                          </div>
+                                                                                                                                                          <div class="deductions-row">
+                                              <div class="deduction-label">Pension Contributions</div>
+                                              <div class="deduction-value" id="deduction_1">- ₦135,000</div>
+                                          </div>
+                                                                                                          </div>
+                          <div>
+                              <div class="split-line"></div>
+                              <div class="total-row highlight">
+                                  <div class="deduction-label">Total tax</div>
+                                  <div id="total_tax" class="deduction-value">- ₦180,000</div>
+                              </div>
+                              <div class="total-row top-highlight">
+                                  <div class="deduction-label">Net pay</div>
+                                  <div id="net_pay" class="deduction-value">* ₦1,620,000</div>
+                              </div>
+                              <div class="split-line"></div>
+                              <!-- <div class="total-row">
+                                  <div class="deduction-label box-bottom-note">Marginal tax rate</div>
+                                  <div class="deduction-value box-bottom-note">10.00%</div>
+                              </div>
+                              <div class="total-row">
+                                  <div class="deduction-label box-bottom-note">Average tax rate</div>
+                                  <div class="deduction-value box-bottom-note">10.00%</div>
+                              </div> -->
+      
+                          </div>
+                      </div>
+                      
+                      <div class="content-vsplit"></div>
+      
+                      <div class="piechart">
+                          <div class="pie-holder">
+                              <svg id="pie-chart-svg" height="160" width="160" style="transform:rotate(-71.328544886122deg)">
+                                  <circle class="under-circle-small" r="70" cx="80" cy="80"></circle>
+                                  <circle id="chart_pay_value" class="stroke-circle-small" style="stroke-dasharray:197.1 219.9" r="35" cx="80" cy="80"></circle>
+                              </svg>
+      
+                              <div class="tag-container left">
+                                  <div class="per-num">90.0%</div>
+                                  <div class="label" title="net pay">Net pay</div>
+                                  <svg class="percent-tag-line left" height="20" width="40">
+                                      <polyline points="0,20 20,20 40,0" style="fill:none;stroke-width:1"></polyline>
+                                  </svg>
+                              </div>
+                              <div class="tag-container right">
+                                  <div class="per-num">10.0%</div>
+                                  <div class="label" title="total tax">Total tax</div>
+                                  <svg class="percent-tag-line right" height="20" width="40">
+                                      <polyline points="0,20 20,0 40,0" style="fill:none;stroke-width:1"></polyline>
+                                  </svg>
+                              </div>
+      
+                              <div class="chart-legend">
+                                  <div>
+                                      <div class="dot tax"></div>
+                                      <div>Total tax</div>
+                                  </div>
+                                  <div>
+                                      <div class="dot net"></div>
+                                      <div>Net pay</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+              <div class="clearfix"></div>
+              <section id="icebard">
+
+                <div class="taxberg-title">The Taxberg</div>
+                
+                <div class="iceberg-holder">
+                    <div id="cloud-left">  <img src="assets/images/cloud3.gif"> </div>
+                    <div id="cloud-right"> <img src="assets/images/cloud_right.png"> </div>
+                    
+                    <div class="taxberg-frame">
+                        <div id="dots-holder" style="bottom: 0px;">
+                            <div id="net-dash" class="dash"> <div class="dots"> <div class="core-dot"></div></div></div>
+                            <div id="net-pay-text" class="text-iceberg">
+                                ₦1,620,000                    <div class="title-tax">Net pay</div>
+                            </div>
+                            <div id="emp-dash" style="" class="dash"> <div class="dots"> <div class="core-dot"></div></div></div>        
+                            <div id="net-emp-text" style="" class="text-iceberg">
+                                ₦180,000                    <div class="title-tax">Tax the employer pays</div>
+                            </div>
+                        </div>
+                        <div id="you-dash" class="dash"> <div class="dots"> <div class="core-dot"></div></div></div>
+                
+                        <div id="net-you-text" class="text-iceberg">
+                            ₦180,000                <div class="title-tax">Tax you pay</div>
+                        </div>
+                
+                        <div id="iceberg-img" style="bottom: 200px;"> 
+                
+                            <div class="boat">
+                                <img class="flag" src="assets/images/ng.png">
+                                <img src="assets/images/iceberg.png"> 
+                            </div>
+                            <div id="ice-pices1">  <img src="assets/images/icepieces2.gif"></div>
+                        </div>
+                        
+                        <div id="water" style="bottom:0px;"></div>
+                        <div id="deep-water" style="bottom: -18.181818181818px;"> </div>
+                    
+                    </div> 
+                    <div class="water-info"></div>
+                    <div class="deep-water-info"></div>
+                    
+                    
+                    <div class="text-total-tax-holder">
+                        <div class="text-total-tax-header">Total tax paid</div>
+                        <div class="text-total-tax-number">₦360,000</div>
+                        <div class="text-total-tax-body">
+                        Did you know your employer also pays tax on your salary? It costs the employer ₦180,000 to pay you ₦1,800,000. In other words, every time you spend ₦10 of your hard-earned money, ₦2.00 goes to the government.            
+                        </div>
+                    
+                    </div>
+                    <div id="real-tax-pay" class="text-total-tax-holder">
+                            <div class="text-total-tax-header">Real tax rate</div>
+                            <div class="text-total-tax-number">18.2%</div>
+                            
+                            <div class="text-total-tax-body">
+                            So, with you and the employer both paying tax, what used to be a 10% tax rate now rises to 18.2%, meaning your real tax rate is actually 8.2% higher than what it seemed at first.                
+                            </div>
+                    </div>
+                            
+                    </div>    
+                
+                
+                
+            </section>
+          </div>
+          <div class="col-md-4">
+            <img src="assets/images/tax-calculator.svg" class="img-fluid">
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+    <div class="clearfix"></div>
+<div class="footer">
+  <div class="container">
+    Copyright © 2020 EAZR HR a product of Hubgrid Management Company. All rights reserved
+  </div>
+</div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>

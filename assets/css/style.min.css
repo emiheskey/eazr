@@ -165,9 +165,9 @@ ul.pro-feat li {
   }
   .txt-l { font-size:28px; font-weight:bold; }
   .txt-top { position:relative; top:-9px; left:-2px; }
-  .tick { font-family: 'Montserrat', sans-serif;;
+  .tick { font-family: 'Montserrat', sans-serif;
     font-size:18px; color:#2CA01C;  }
-    .notick { font-family: 'Montserrat', sans-serif;;
+    .notick { font-family: 'Montserrat', sans-serif;
       font-size:18px; color:rgb(236, 236, 236); }
   .hide {
     border:0;

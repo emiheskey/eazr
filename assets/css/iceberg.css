@@ -1,0 +1,365 @@
+
+*{
+    box-sizing: border-box;
+    font-family: "Open Sans";
+    padding: 0px;
+    margin: 0px;
+    font-size: 13px;
+}
+.taxberg-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    color: white;
+    font-size: 25px;
+}
+
+section#icebard {
+    background: #00B1F6;
+    position: relative;
+    padding: initial;
+    width: 100%;
+    overflow: hidden;
+    margin-top: initial;
+    margin-bottom: initial;
+    height: 670px;
+}
+
+section#icebard img {
+    width: inherit;
+}
+
+div#iceberg-img img {
+    width: inherit;
+}
+
+.iceberg-holder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+div#iceberg-img {
+    width: 300px;
+    margin: auto;
+    position: absolute;
+    height: 300px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+}
+
+div#cloud-left {
+    width: 135px;
+    position: absolute;
+    left: 60px;
+    top: -6px;
+}
+
+div#cloud-right {
+    width: 80px;
+    position: absolute;
+    right: 78px;
+    top: 48px;
+}
+
+div#ice-pices1 {
+    width: 160px;
+    margin: auto;
+    position: relative;
+    margin-top: -106px;
+}
+
+div#ice-pices2 {
+    width: 50px;
+    margin: auto;
+    position: relative;
+    top: -50px;
+}
+div#water {
+    width: 100%;
+    background: linear-gradient(rgb(99, 218, 255), rgb(47, 115, 136));
+    background-blend-mode: multiply;
+    height: 100%;
+    position: absolute;
+    mix-blend-mode: multiply;
+    bottom: 0px;
+    background-image: url("../images/waterbg5.gif");
+    background-size: contain;
+    background-repeat: round;
+    background-position-y: top;
+}
+
+div#fish-left {
+    width: 85px;
+    position: absolute;
+    top: 0px;
+    display: none;
+}
+
+div#fish-center {
+    position: absolute;
+    width: 30px;
+    right: 0px;
+    top: 0px;
+    display: none;
+}
+div#fish-right {
+    width: 110px;
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    display: none;
+}
+div#deep-water {
+    height: 300px;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    background: #3cb2ce;
+    mix-blend-mode: multiply;
+    bottom: 0px;
+}
+
+@keyframes boat {
+  50%  {transform: rotate(-3deg) translateY(-5px)}
+}
+.boat{
+  animation: boat 4s ease-in-out infinite;
+  transform-origin: center;
+  height: 300px;
+  width: 300px;
+}
+img.flag {
+    width: 16px !important;
+    height: 11px;
+    position: relative;
+    left: 141px;
+    top: 23px;
+    z-index: 1;
+}
+.dash {
+    left: 36%;
+    -webkit-transform: translate(-32.8%, 0);
+    position: relative;
+    border: 0.6px dashed #ffa500;
+    width: 19%;
+    top: 0px;
+    z-index: 5;
+    height: 0px;
+}
+
+.dots {
+    float: right;
+    height: 15px;
+    width: 15PX;
+    border-radius: 45px;
+    margin-top: -8px;
+    position: relative;
+    left: 13px;
+}
+.core-dot {
+    background: #ffa500;
+    height: 10px;
+    width: 10px;
+    position: relative;
+    top: 2px;
+    left: -1px;
+    border-radius: 120px;
+}
+div#net-dash {
+    top: 223px;
+    left: 37%;
+    -webkit-transform: translate(-37%, 0);
+}
+
+div#you-dash {
+    top: 315px;
+    border-color: orange;
+    width: 19%;
+}
+
+div#emp-dash .dots {border-color: orange;float: left;left: initial;right: 12px;}
+
+
+
+div#you-dash .dots {
+    border-color: orange;
+    left: 17px;
+}
+
+div#you-dash .dots .core-dot {
+    background: orange;
+}
+
+div#emp-dash {
+    border-color: orange;
+    top: 375px;
+    left: 62.2%;
+    -webkit-transform: translate(-60.2%, 0);
+}
+
+div#emp-dash .dots .core-dot {
+    background: orange;
+}
+div#dots-holder {
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+.text-iceberg {
+    color: white;
+    font-size: 20px;
+    z-index: 20;
+    position: absolute;
+    text-align: right;
+    /* white-space: nowrap; */
+    width: 140px;
+    height: 47px;
+    white-space: nowrap;
+}
+
+.title-tax {
+    font-size: 13px;
+    font-weight: 700;
+    white-space: normal;
+}
+div#net-you-text {
+    bottom: 263px;
+    left: 45px;
+}
+
+div#net-pay-text {
+    bottom: 416px;
+    left: 45px;
+}
+div#net-emp-text {
+    right: 45px;
+    top: 350px;
+    text-align: left;
+}
+.text-total-tax-holder {
+    position: absolute;
+    bottom: 0px;
+    width: 290px;
+    color: white;
+    padding: 20px;
+    /* margin-bottom: 20px; */
+}
+
+.text-total-tax-header {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.text-total-tax-number {
+    padding: 0px 0px;
+    font-size: 34px;
+    padding-bottom: 15px;
+    white-space: nowrap;
+}
+
+.text-total-tax-body {
+    line-height: 20px;
+    font-size: 13px;
+    text-align: justify;
+    font-weight: 100;
+    opacity: 0.8;
+}
+.pie-iceberg {
+    position: absolute;
+    bottom: 85px;
+    right: 70px;
+}
+
+.pie-iceberg circle#chart_pay_value {
+    fill: rgb(41, 173, 228);
+    stroke: #FFB08B;
+}
+
+
+
+.pie-iceberg .under-circle-small {
+    fill: rgb(41, 173, 228);
+}
+.tag-container.right {
+    position: absolute;
+    top: -4px;
+    right: 30px;
+
+}
+
+.pie-iceberg #pie-chart-svg {
+    transform: rotate(287deg);
+    /* border: 30px solid #ffffff61; */
+    border-radius: 180px;
+    zoom: 0.7;
+    box-sizing: content-box;
+}
+.deep-water-info {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    z-index: 0;
+    /* background: #637183; */
+    background-blend-mode: multiply;
+    mix-blend-mode: multiply;
+}
+div.water-info {
+    height: 200px;
+    position: absolute;
+    width: 100%;
+    /* background: linear-gradient(#3e5879, #1e4d5c); */
+    background-blend-mode: multiply;
+    mix-blend-mode: multiply;
+}
+.taxberg-frame {
+    overflow: hidden;
+}
+.pie-border {
+    background: #1275b17a;
+    width: 120px;
+    height: 120px;
+    border-radius: 360px;
+    margin: auto;
+    margin-bottom: -110px;
+}
+svg.percent-tag-line.right {
+    transform: rotate(1deg);
+
+}
+.circle {
+    background: #00B1F6;
+    width: 100px;
+    height: 100px;
+    border-radius: 360px;
+    margin: auto;
+}
+
+.per-number {
+    position: relative;
+    color: white;
+    font-size: 21px;
+    text-align: center;
+    top: 36px;
+}
+.pie-title {
+    color: white;
+    font-size: 13px;
+    margin-top: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+div#real-tax-pay {
+    right: 0px;
+}
+
+div#real-tax-pay .text-total-tax-header {
+    text-align: right;
+}
+
+div#real-tax-pay .text-total-tax-number {
+    text-align: right;
+}
