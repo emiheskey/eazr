@@ -747,3 +747,31 @@ ul.product-feature li {
   background-size: cover;
   display: block;
 }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  /* Styles */
+  .intro {
+    width: 100%;
+    min-height: 100px;
+  }
+  .intro a {
+    min-height: 100px;
+
+  }
+  }
+  
+  
+  /* Smartphones (portrait) ----------- */
+  @media only screen and (max-width : 320px) {
+  /* Styles */
+  .intro {
+    width: 100%;
+    min-height: 100px;
+  }
+  .intro a {
+    min-height: 100px;
+
+  }
+  }
+  
