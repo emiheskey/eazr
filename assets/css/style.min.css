@@ -714,3 +714,36 @@ ul.product-feature li {
   border-radius: 5px;
   margin-bottom: 15px;
 }
+
+/* Landing Page */
+.intro {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  min-height: 700px;
+}
+.intro a {
+  display: block;
+  width: 100%;
+  min-height: 700px;
+  text-align: center;
+  padding-top: 85%;
+}
+.intro a h2 {
+  font-size: 2.5em;
+}
+.intro a.business {
+  background: url(../images/business.jpg) no-repeat;
+  background-size: cover;
+  display: block;
+  color:#FFF;
+}
+.intro a.business h2 {
+  color: #fff;
+  text-shadow: 0 1px 1px #000;
+}
+.intro a.personal {
+  background: url(../images/personal.jpg) no-repeat;
+  background-size: cover;
+  display: block;
+}
